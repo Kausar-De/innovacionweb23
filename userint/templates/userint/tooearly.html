@@ -1,0 +1,196 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Too Early!</title>
+        <style>
+            body { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABZ0RVh0Q3JlYXRpb24gVGltZQAxMC8yOS8xMiKqq3kAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzVxteM2AAABHklEQVRIib2Vyw6EIAxFW5idr///Qx9sfG3pLEyJ3tAwi5EmBqRo7vHawiEEERHS6x7MTMxMVv6+z3tPMUYSkfTM/R0fEaG2bbMv+Gc4nZzn+dN4HAcREa3r+hi3bcuu68jLskhVIlW073tWaYlQ9+F9IpqmSfq+fwskhdO/AwmUTJXrOuaRQNeRkOd5lq7rXmS5InmERKoER/QMvUAPlZDHcZRhGN4CSeGY+aHMqgcks5RrHv/eeh455x5KrMq2yHQdibDO6ncG/KZWL7M8xDyS1/MIO0NJqdULLS81X6/X6aR0nqBSJcPeZnlZrzN477NKURn2Nus8sjzmEII0TfMiyxUuxphVWjpJkbx0btUnshRihVv70Bv8ItXq6Asoi/ZiCbU6YgAAAABJRU5ErkJggg==);}
+    .error-template {padding: 40px 15px;text-align: center;}
+    .error-actions {margin-top:15px;margin-bottom:15px;}
+    .error-actions .btn { margin-right:10px; }
+    p {
+      text-align: center;
+      font-family: Impact;
+      font-size: 60px;
+      margin-top: 0px;
+       background: linear-gradient(
+        to right, 
+        hsl(98 100% 62%), 
+        hsl(204 100% 59%)
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: center;
+    }
+    /* From cssbuttons.io by @westitan */
+    button {
+     position: relative;
+     padding: 25px 50px;
+     display: block;
+     text-decoration: none;
+     text-transform: uppercase;
+     overflow: hidden;
+     border-radius: 40px;
+     border: none;
+    }
+    
+    button span {
+     position: relative;
+     color: #fff;
+     font-family: Arial;
+     letter-spacing: 8px;
+     font-size: 20px;
+     z-index: 1;
+    }
+    
+    button .liquid {
+     position: absolute;
+     top: -80px;
+     left: 0;
+     width: 100%;
+     height: 200px;
+     background: #4973ff;
+     box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
+     transition: .5s;
+    }
+    
+    button .liquid::after,
+    button .liquid::before {
+     content: '';
+     width: 200%;
+     height: 200%;
+     position: absolute;
+     top: 0;
+     left: 50%;
+     transform: translate(-50%, -75%);
+     background: #fff;
+    }
+    
+    button .liquid::before {
+     border-radius: 45%;
+     background: rgba(20, 20, 20, 1);
+     animation: animate 5s linear infinite;
+    }
+    
+    button .liquid::after {
+     border-radius: 40%;
+     background: rgba(20, 20, 20, .5);
+     animation: animate 10s linear infinite;
+    }
+    
+    button:hover .liquid {
+     top: -120px;
+    }
+    
+    @keyframes animate {
+     0% {
+      transform: translate(-50%, -75%) rotate(0deg);
+     }
+    
+     100% {
+      transform: translate(-50%, -75%) rotate(360deg);
+     }
+    }
+    
+    @media only screen and (min-width: 768px) {
+        body { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABZ0RVh0Q3JlYXRpb24gVGltZQAxMC8yOS8xMiKqq3kAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzVxteM2AAABHklEQVRIib2Vyw6EIAxFW5idr///Qx9sfG3pLEyJ3tAwi5EmBqRo7vHawiEEERHS6x7MTMxMVv6+z3tPMUYSkfTM/R0fEaG2bbMv+Gc4nZzn+dN4HAcREa3r+hi3bcuu68jLskhVIlW073tWaYlQ9+F9IpqmSfq+fwskhdO/AwmUTJXrOuaRQNeRkOd5lq7rXmS5InmERKoER/QMvUAPlZDHcZRhGN4CSeGY+aHMqgcks5RrHv/eeh455x5KrMq2yHQdibDO6ncG/KZWL7M8xDyS1/MIO0NJqdULLS81X6/X6aR0nqBSJcPeZnlZrzN477NKURn2Nus8sjzmEII0TfMiyxUuxphVWjpJkbx0btUnshRihVv70Bv8ItXq6Asoi/ZiCbU6YgAAAABJRU5ErkJggg==);}
+    .error-template {padding: 40px 15px;text-align: center;}
+    .error-actions {margin-top:15px;margin-bottom:15px;}
+    .error-actions .btn { margin-right:10px; }
+    p {
+      text-align: center;
+      font-family: Impact;
+      font-size: 120px;
+      margin-top: 2px;
+       background: linear-gradient(
+        to right, 
+        hsl(98 100% 62%), 
+        hsl(204 100% 59%)
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: center;
+    }
+    .new{
+        font-size: 80px;
+    
+    }
+    .new2{
+        font-size: 50px;
+        
+    }
+    
+    
+    </style>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="error-template">
+                
+
+ 
+                <h1 class="new">
+                  <font face="impact">   You're Too Early !</font></h1>
+                <h2 class="new2">
+                    <font face="arial">  404 Not Found </font></h2>
+                <div class="new2">
+                    <div class="new2">
+                    Please have some Patience :)
+                </div>
+            </div>            
+
+
+        
+                <p id="demo"></p>
+
+                <div class="error-actions">
+               <center>     <button>
+  <span><a style="color:#ffffff; text-decoration:none;" href="{% url 'logout' %}">LOGOUT</a></span>
+  <div class="liquid"></div>
+</button></div></center>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("April 2, 2022 18:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+    </body>
+</html>
