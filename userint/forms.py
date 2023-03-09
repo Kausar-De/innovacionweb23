@@ -24,6 +24,7 @@ class ParticipantForm(ModelForm):
             'levelchoice': _('Difficulty Level'),
             'repolink': _('Link to GitHub Repository'),
             'livelink': _('Link to Live Deployment'),
-            'videolink': _('Link to Submission Video'),
+            'codingvideolink': _('Link to Live Coding Video'),
+            'videolink': _('Link to Demo Video'),
             'created_date': _('Submission Date & Time'),
         }

@@ -22,6 +22,7 @@ class Participant(models.Model):
     levelchoice = models.CharField(choices = LEVEL_CHOICES, max_length = 200, null = True, default = LEVEL_CHOICES[0][0])
     repolink = models.CharField(max_length = 500, null = True, unique = True)
     livelink = models.CharField(max_length = 500, null = True, unique = True)
+    codingvideolink = models.CharField(max_length = 500, null = True, unique = True)
     videolink = models.CharField(max_length = 500, null = True, unique = True)
     created_date = models.DateTimeField(default = timezone.now, null = True)
 
