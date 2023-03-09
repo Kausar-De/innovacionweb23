@@ -37,8 +37,8 @@ def logoutUser(request):
 
 def entryPage(request):
     currenttime = datetime.datetime.now()
-    beforetime = datetime.datetime(2022, 4, 2, hour = 18, minute = 0, second = 0)
-    aftertime = datetime.datetime(2023, 4, 3, hour = 18, minute = 0, second = 0)
+    beforetime = datetime.datetime(2023, 4, 10, hour = 18, minute = 0, second = 0)
+    aftertime = datetime.datetime(2023, 3, 11, hour = 18, minute = 0, second = 0)
     if currenttime < beforetime:
         return redirect('tooearly')
     elif currenttime > aftertime:
