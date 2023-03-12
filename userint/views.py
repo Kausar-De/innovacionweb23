@@ -85,9 +85,9 @@ def extract_CSV(request):
     response = HttpResponse(content_type = 'text/csv')
     
     writer = csv.writer(response)
-    writer.writerow(['Participant ID', 'Team Name', 'Team Lead Name', 'Team Lead Phone No.', 'Team Lead Email', 'Member 2 Name', 'Member 3 Name', 'Member 4 Name', 'GitHub Repository Link', 'Live Deployment Link', 'Creation Date'])
+    writer.writerow(['Participant ID', 'Team Name', 'Team Lead Name', 'Team Lead Phone No.', 'Team Lead Email', 'Member 2 Name', 'Member 3 Name', 'Member 4 Name', 'GitHub Repository Link', 'Live Deployment Link', 'Live Coding Video Link', 'Demo Video Link', 'Creation Date'])
 
-    for parti in Participant.objects.all().values_list('participant', 'teamname', 'teamlead', 'leadphone', 'leademail', 'member2', 'member3', 'member4', 'repolink', 'livelink', 'created_date'):
+    for parti in Participant.objects.all().values_list('participant', 'teamname', 'teamlead', 'leadphone', 'leademail', 'member2', 'member3', 'member4', 'repolink', 'livelink', 'codingvideolink', 'videolink', 'created_date'):
         writer.writerow(parti)
 
     response['Content-Disposition'] = 'attachment; filename = "404Submissions.csv"'
